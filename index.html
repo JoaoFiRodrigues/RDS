@@ -1338,6 +1338,358 @@
 
 
         /* ================================================= */
+        /* FOOTER COMPLETO */
+        /* ================================================= */
+
+        .footer-content{
+            width:90%;
+            max-width:1360px;
+            margin:auto;
+            display:grid;
+            grid-template-columns:1.15fr 1fr .9fr 1.25fr;
+            gap:38px;
+            text-align:left;
+            padding:38px 0 34px;
+            align-items:start;
+        }
+
+        .footer-brand img{
+            width:145px;
+            max-width:100%;
+            margin-bottom:16px;
+        }
+
+        .footer-brand p,
+        .footer-location p{
+            color:rgba(255,255,255,.72);
+            font-size:14px;
+            line-height:1.7;
+        }
+
+        .footer-column h3{
+            color:#ffffff;
+            font-size:18px;
+            margin:7px 0 18px;
+        }
+
+        .footer-contact-list{
+            display:flex;
+            flex-direction:column;
+            gap:14px;
+        }
+
+        .footer-contact-list a{
+            display:flex;
+            align-items:flex-start;
+            gap:10px;
+            color:rgba(255,255,255,.82);
+            text-decoration:none;
+            font-size:14px;
+            line-height:1.5;
+            overflow-wrap:anywhere;
+            transition:color .2s ease;
+        }
+
+        .footer-contact-list a:hover,
+        .footer-location a:hover{ color:#ff737c; }
+
+        .footer-contact-icon{ color:#ffffff; font-size:17px; min-width:18px; display:inline-flex; align-items:center; justify-content:center; }
+        .footer-contact-icon svg{ width:19px; height:19px; display:block; fill:currentColor; }
+        .footer-socials a svg{ width:20px; height:20px; display:block; fill:currentColor; }
+
+        .footer-socials{
+            display:flex;
+            flex-wrap:wrap;
+            gap:11px;
+        }
+
+        .footer-socials a{
+            width:42px;
+            height:42px;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            border:1px solid rgba(255,255,255,.22);
+            border-radius:10px;
+            color:#ffffff;
+            text-decoration:none;
+            font-size:16px;
+            font-weight:700;
+            transition:background .25s ease, transform .25s ease, border-color .25s ease;
+        }
+
+        .footer-socials a:hover{
+            background:var(--vermelho);
+            border-color:var(--vermelho);
+            transform:translateY(-3px);
+        }
+
+        .footer-location a{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            margin-top:12px;
+            color:#ffffff;
+            text-decoration:none;
+            font-size:13px;
+            font-weight:600;
+            transition:color .2s ease;
+        }
+
+        .footer-map{
+            width:100%;
+            height:145px;
+            margin-top:14px;
+            border:1px solid rgba(255,255,255,.18);
+            border-radius:10px;
+            overflow:hidden;
+            background:rgba(255,255,255,.06);
+        }
+
+        .footer-map iframe{ width:100%; height:100%; border:0; display:block; }
+
+        .footer-bottom{
+            padding:18px 20px;
+            border-top:1px solid rgba(255,255,255,.10);
+            color:rgba(255,255,255,.58);
+            font-size:13px;
+            text-align:center;
+        }
+
+        .whatsapp-float{
+            position:fixed;
+            right:24px;
+            bottom:24px;
+            z-index:998;
+            width:60px;
+            height:60px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:50%;
+            background:#25D366;
+            color:#ffffff;
+            text-decoration:none;
+            font-size:30px;
+            box-shadow:0 8px 24px rgba(0,0,0,.25);
+            transition:transform .25s ease, box-shadow .25s ease;
+        }
+
+        .whatsapp-float:hover{
+            transform:translateY(-4px) scale(1.04);
+            box-shadow:0 12px 28px rgba(0,0,0,.3);
+        }
+
+        .whatsapp-float span{
+            position:absolute;
+            width:1px;
+            height:1px;
+            padding:0;
+            margin:-1px;
+            overflow:hidden;
+            clip:rect(0,0,0,0);
+            white-space:nowrap;
+            border:0;
+        }
+
+        @media(max-width:1050px){
+            .footer-content{ grid-template-columns:1fr 1fr; gap:30px; }
+        }
+
+        @media(max-width:768px){
+            .footer-content{ text-align:center; }
+            .footer-brand{ grid-column:1 / -1; }
+            .footer-socials{ justify-content:center; }
+            .footer-contact-list a{ justify-content:center; }
+            .footer-location a{ justify-content:center; }
+            .footer-map{ max-width:520px; margin:14px auto 0; }
+        }
+
+        @media(max-width:520px){
+            .footer-content{ grid-template-columns:1fr; gap:25px; padding:28px 0; }
+            .footer-brand{ grid-column:auto; }
+            .footer-column h3{ margin-bottom:13px; }
+            .whatsapp-float{ width:56px; height:56px; right:16px; bottom:16px; font-size:27px; }
+        }
+
+
+        /* ================================================= */
+        /* NAVBAR RESPONSIVA */
+        /* ================================================= */
+
+        html { scroll-padding-top: 88px; }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background: rgba(13, 46, 42, .97);
+            border-bottom: 1px solid rgba(255,255,255,.10);
+            box-shadow: 0 6px 22px rgba(0,0,0,.10);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1360px;
+            min-height: 78px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .navbar-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Titillium Web', Arial, sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+        }
+
+        .navbar-brand img {
+            display: block;
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: clamp(18px, 2.5vw, 36px);
+            list-style: none;
+        }
+
+        .navbar-links a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 0;
+            color: rgba(255,255,255,.88);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color .2s ease;
+        }
+
+        .navbar-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            width: 0;
+            height: 2px;
+            border-radius: 2px;
+            background: var(--vermelho);
+            transition: width .2s ease;
+        }
+
+        .navbar-links a:hover,
+        .navbar-links a:focus-visible { color: #fff; }
+
+        .navbar-links a:hover::after,
+        .navbar-links a:focus-visible::after { width: 100%; }
+
+        .navbar-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            padding: 9px;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 9px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .navbar-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            margin: 5px auto;
+            border-radius: 2px;
+            background: currentColor;
+            transition: transform .2s ease, opacity .2s ease;
+        }
+
+        .navbar-toggle[aria-expanded="true"] span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .navbar-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        .navbar-toggle[aria-expanded="true"] span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                width: 92%;
+                min-height: 70px;
+                gap: 12px;
+            }
+
+            .navbar-brand { font-size: 21px; }
+            .navbar-brand img { width: 43px; height: 43px; }
+
+            .navbar-toggle {
+                display: block;
+                flex-shrink: 0;
+            }
+
+            .navbar-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 8px 4%;
+                background: var(--verde-profundo);
+                border-top: 1px solid rgba(255,255,255,.10);
+                box-shadow: 0 14px 22px rgba(0,0,0,.18);
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(-8px);
+                pointer-events: none;
+                transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+            }
+
+            .navbar-links.is-open {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .navbar-links li { width: 100%; }
+
+            .navbar-links a {
+                display: block;
+                padding: 14px 8px;
+                border-bottom: 1px solid rgba(255,255,255,.08);
+                font-size: 15px;
+            }
+
+            .navbar-links li:last-child a { border-bottom: 0; }
+            .navbar-links a::after { display: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .navbar-links, .navbar-links a, .navbar-links a::after,
+            .navbar-toggle span { transition: none; }
+        }
+
+
+        /* ================================================= */
         /* LIGHTBOX */
         /* ================================================= */
 
@@ -1769,13 +2121,44 @@
 <body>
 
 
+    <!-- ================================================= -->
+    <!-- NAVEGAÇÃO PRINCIPAL -->
+    <!-- ================================================= -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegação principal">
+            <a class="navbar-brand" href="#home" aria-label="TORZIO - início">
+                <img src="img/LogoR.png" alt="">
+                <span>TORZIO</span>
+            </a>
+
+            <button class="navbar-toggle" type="button"
+                    aria-label="Abrir menu" aria-expanded="false"
+                    aria-controls="navbar-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
 
     <!-- ================================================= -->
     <!-- HERO -->
     <!-- ================================================= -->
 
 
-    <section class="hero">
+    <section class="hero" id="home">
 
 
         <div class="hero-content">
@@ -1982,7 +2365,7 @@
     <!-- ================================================= -->
 
 
-    <section class="sobre">
+    <section class="sobre" id="sobre">
 
 
         <div class="container">
@@ -2032,7 +2415,7 @@
     <!-- ================================================= -->
 
 
-    <section class="servicos">
+    <section class="servicos" id="servicos">
 
 
         <div class="container">
@@ -2324,49 +2707,74 @@
 
 
     <!-- ================================================= -->
-    <!-- CTA -->
-    <!-- ================================================= -->
-
-    <section class="cta">
-
-            <p>
-                Entre em contato e solicite um orçamento.
-            </p>
-
-            <div class="contato-botoes">
-
-                <a
-                    class="contato-btn email-btn"
-                    href="mailto:contato@torzio.com.br"
-                >
-                    ✉ contato@torzio.com.br
-                </a>
-
-                <a
-                    class="contato-btn whatsapp-btn"
-                    href="https://wa.me/5519996159111"
-                    target="_blank"
-                >
-                    Falar no WhatsApp
-                </a>
-
-            </div>
-
-        </section>
-
-
-    <!-- ================================================= -->
     <!-- FOOTER -->
     <!-- ================================================= -->
 
 
-    <footer>
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/LogoR.png" alt="TORZIO Soluções em Metais">
+                <p>Projetos e soluções em metais para a indústria, com experiência, qualidade e compromisso em cada entrega.</p>
+            </div>
 
-        © 2026 TORZIO® Indústria Metalúrgica - Todos os direitos reservados
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <div class="footer-contact-list">
+                    <a href="mailto:contato@torzio.com.br">
+                        <span class="footer-contact-icon" aria-hidden="true">✉</span>
+                        <span>contato@torzio.com.br</span>
+                    </a>
+                    <a href="https://wa.me/5519996159111" target="_blank" rel="noopener noreferrer" aria-label="Fale com a TORZIO pelo WhatsApp">
+                        <span class="footer-contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32"><path d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-1.9A15.1 15.1 0 1 0 16 .8Zm0 27.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.4 1.1 1.2-4.3-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2.1-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5Z"/></svg>
+                        </span>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
 
+            <div class="footer-column">
+                <h3>Redes sociais</h3>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/torzio.indmetalurgica" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">f</a>
+                    <a href="https://www.linkedin.com/company/torzio-industria-metalurgica/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/torzio.indmetalurgica/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-location">
+                <h3>Localização</h3>
+                <p>Visite nossa unidade. Veja no mapa como chegar até a TORZIO.</p>
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=-22.7415112,-47.3606567&z=16&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização da TORZIO Indústria Metalúrgica no Google Maps">
+                    </iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/eFomBwSvGC58kyA57" target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">⌖</span> Abrir rota no Google Maps
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 TORZIO® Soluções em Metais - Todos os direitos reservados
+        </div>
     </footer>
 
 
+
+    <a class="whatsapp-float" href="https://wa.me/5519996159111" target="_blank" rel="noopener noreferrer" aria-label="Fale com a TORZIO pelo WhatsApp" title="Fale conosco pelo WhatsApp">
+        <span>WhatsApp</span>
+        <svg viewBox="0 0 32 32" width="31" height="31" aria-hidden="true" fill="currentColor">
+            <path d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-1.9A15.1 15.1 0 1 0 16 .8Zm0 27.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.4 1.1 1.2-4.3-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2.1-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5Z"/>
+        </svg>
+    </a>
 
     <!-- ================================================= -->
     <!-- LIGHTBOX -->
@@ -2399,6 +2807,40 @@
 
 
     <script>
+
+        // Menu responsivo
+        const menuToggle = document.querySelector('.navbar-toggle');
+        const navbarLinks = document.querySelector('.navbar-links');
+
+        function closeNavbar() {
+            if (!menuToggle || !navbarLinks) return;
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Abrir menu');
+            navbarLinks.classList.remove('is-open');
+        }
+
+        if (menuToggle && navbarLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', String(!isOpen));
+                menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+                navbarLinks.classList.toggle('is-open', !isOpen);
+            });
+
+            navbarLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeNavbar);
+            });
+
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape') closeNavbar();
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) closeNavbar();
+            });
+        }
+
+
 
 
         const images =
